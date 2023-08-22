@@ -1,0 +1,583 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  background-color: #181717;
+}
+
+@font-face {
+  font-family: "8-bit Arcade Out";
+  src: url(fontes/8-bit\ Arcade\ Out.ttf) format("ttf");
+}
+
+.navbar_ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #232121;
+  padding: 2%;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+}
+
+.navbar_ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar_ul a:hover {
+  color: #7664b3;
+}
+.logo_navbar {
+  height: 35px;
+  width: auto;
+}
+
+.navbar_fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+
+main {
+  padding-top: 20px;
+}
+
+.inicio {
+  background-color: #181717;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+}
+.inicio_container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: flex-start;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  margin: 10%;
+}
+
+#titulo_danielbraga {
+  font-size: 300%;
+  width: 12ch;
+  width: 340px;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s steps(12) 1s, blinking 0.5s infinite step-end alternate;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes blinking {
+  50% {
+    border-color: transparent;
+    border-right: 0.05em solid;
+  }
+}
+
+.linkedin_container,
+.github_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 20px;
+}
+
+.linkedin_button,
+.github_button {
+  margin-right: 10px;
+  color: white;
+  display: inline-block;
+  padding: 20px 50px;
+  text-decoration: none;
+  background-color: #232121;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  font-size: 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.linkedin_button:hover,
+.github_button:hover,
+.vermais_container:hover,
+.button_visualizar:hover {
+  transform: scale(0.9);
+}
+
+.laptop_minhalogo {
+  width: 439px;
+  height: 298px;
+  flex-shrink: 0;
+}
+
+.scrolldown_container {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  color: white;
+  font-family: "Quantico", sans-serif;
+  text-align: justify;
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+
+.scrolldown_container.hide {
+  opacity: 0;
+}
+
+.doublearrow {
+  width: 20px;
+  height: 19px;
+  flex-shrink: 0;
+  animation: scrollAnimation 1.5s infinite;
+  display: inline-block;
+}
+
+@keyframes scrollAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#hidden_scrolldown {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#sobremim {
+  background-color: #2b2b3f;
+}
+.titulo_sobremim {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 150px;
+  font-family: "8-bit Arcade In";
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 4px;
+  -webkit-text-stroke: 5px black;
+  padding: 60px;
+}
+
+.gameboy_container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.gameboy {
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+}
+
+.gameboy_conteudo {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  z-index: 2;
+  /* background-color: red; */
+  align-items: center;
+  flex-direction: column;
+}
+
+#press_start-texto {
+  width: 250px;
+  position: absolute;
+  top: 29%;
+  margin-left: 1%;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+#start_button {
+  width: 180px;
+  position: absolute;
+  bottom: 40%;
+  opacity: 1;
+  transition: opacity 0.5s;
+  z-index: 2;
+  transition: transform 0.4s ease;
+}
+
+#start_button:hover {
+  transform: scale(0.9);
+}
+
+#seta_cinza-start {
+  width: 32px;
+  position: absolute;
+  bottom: 39%;
+  animation: arrowAnimation 1s ease-in-out infinite alternate;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+@keyframes arrowAnimation {
+  0% {
+    transform: translate(-400%, -50%);
+  }
+  100% {
+    transform: translate(-450%, -50%);
+  }
+}
+
+#sobremim_texto {
+  color: #000;
+  font-family: Quantico;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0.48px;
+  position: absolute;
+  width: 28%;
+  text-align: center;
+  width: 38%;
+  bottom: 37%;
+  opacity: 0;
+  transition: opacity 0.5s;
+  z-index: 1;
+}
+
+#button_back {
+  padding: 30px 30px;
+  position: absolute;
+  right: 15.5%;
+  border-radius: 200px;
+  top: 40%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 20;
+}
+
+#seta_cinza-back {
+  width: 32px;
+  position: absolute;
+  top: 54%;
+  right: 17%;
+  animation: arrowAnimation2 1s ease-in-out infinite alternate;
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+
+@keyframes arrowAnimation2 {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.goku_gif {
+  position: absolute;
+  bottom: 88%;
+  right: 3%;
+  transform: rotate(9.108deg);
+  width: 120px;
+}
+
+.sasuke_gif {
+  position: absolute;
+  bottom: 83%;
+  left: 5%;
+  transform: rotate(-11.108deg);
+  width: 110px;
+}
+
+.hadouken_esquerdo {
+  position: absolute;
+  bottom: 74%;
+  right: 50%;
+  width: 140px;
+}
+
+.hadouken_direito {
+  position: absolute;
+  bottom: 73.8%;
+  left: 50%;
+  width: 140px;
+}
+
+.yasuo_png {
+  position: absolute;
+  bottom: 65%;
+  right: 80%;
+  width: 90px;
+}
+
+.thresh_png {
+  position: absolute;
+  bottom: 56%;
+  left: 70%;
+  width: 210px;
+}
+
+.megaman_pixelart {
+  position: absolute;
+  top: 71.5%;
+  transform: rotate(6.456deg);
+  left: 38%;
+  width: 76px;
+}
+
+.mario_pixelart {
+  position: absolute;
+  top: 73.5%;
+  left: 50%;
+  transform: rotate(-3.456deg);
+  width: 80px;
+}
+
+.interrogacao_gif {
+  position: absolute;
+  transform: rotate(26.24deg);
+  width: 34px;
+  bottom: 27%;
+  left: 43%;
+}
+
+.balao_pensamento {
+  position: absolute;
+  bottom: 23%;
+  left: 42%;
+}
+
+.princesa_mario {
+  position: absolute;
+  bottom: 25.7%;
+  left: 57%;
+  width: 30px;
+}
+
+#skills {
+  background-color: #f0f7f4;
+  width: 100%;
+  padding: 7% 0;
+}
+
+.skills_titulo-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+}
+
+.skills_subtitulos {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+  margin-bottom: 5%;
+  height: 32px;
+}
+
+.skills_telas {
+  display: flex;
+  justify-content: space-around;
+}
+
+#projetos {
+  background-color: #2b2b3f;
+  overflow: hidden;
+}
+
+.titulo_projetos-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.projetos_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.universostartup_container {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 13%;
+}
+
+.universo_subtitulo {
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+.universostartup_descricao {
+  color: #fff;
+  text-align: justify;
+  font-family: Quantico;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: 0.6px;
+  width: 70%;
+}
+
+.universostartup_tecnologias {
+  color: #7664b3;
+  text-align: justify;
+  font-family: Quantico;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: 0.6px;
+  text-decoration-line: underline;
+  padding-top: 2%;
+}
+
+.embreve_container {
+  display: flex;
+  flex-direction: column;
+  margin-right: 13%;
+  margin-bottom: 20%;
+  align-items: flex-start;
+}
+
+.embreve_titulo {
+  align-items: flex-start;
+  margin-top: 9%;
+  margin-bottom: 6%;
+}
+
+.embreve_descricao {
+  color: #fff;
+  text-align: justify;
+  font-family: Quantico;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 115%;
+  letter-spacing: 0.6px;
+}
+
+.button_visualizar {
+  display: flex;
+  align-items: center;
+  margin-top: 5%;
+  transition: transform 0.4s ease;
+}
+
+.vetor_link {
+  position: absolute;
+  margin-left: 20px;
+}
+
+.visualizar_universostartup {
+  color: #fff;
+  text-decoration: none;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  padding: 12px 50px;
+  background-color: #232121;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.vermais_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10%;
+  transition: transform 0.4s ease;
+}
+
+.vermais {
+  text-decoration: none;
+  border: none;
+  padding: 15px 70px;
+  color: #fff;
+  background-color: #232121;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  border-radius: 10px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.vermais_icon {
+  position: absolute;
+  margin-right: 12%;
+}
+
+.rodape {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #d9d9f3;
+  height: 900px;
+}
+
+.links_titulo {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "8-bit Arcade In";
+  font-size: 130px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 3px;
+  -webkit-text-stroke: 5px black;
+  padding-top: 20%;
+}
+
+.spiderman {
+  width: 120px;
+  position: relative;
+  margin-left: 54%;
+  bottom: 14px;
+}
+
+.ironman {
+  bottom: 197px;
+  left: 350px;
+  position: relative;
+}
